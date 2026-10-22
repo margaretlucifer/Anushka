@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Garamond, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-ivory: #FAF8F3;
+  --color-beige: #F0E9DF;
+  --color-charcoal: #292824;
+  --color-taupe: #77736C;
+  --color-sage: #9BAF91;
+  --color-sage-dark: #798E6F;
+  --color-rose: #D9A9A1;
+  --color-rose-dark: #BF877E;
+  --color-sand-border: #E5DFD5;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FAF8F3;
+  color: #292824;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom editorial styling */
+.font-display {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-editorial {
+  font-family: "Cormorant Garamond", Garamond, serif;
+}
+
+.font-body {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #9BAF91;
+  outline-offset: 3px;
+}
+
+/* Fluid responsive headings */
+.headline-hero {
+  font-size: clamp(2.5rem, 6vw + 1rem, 5.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.headline-section {
+  font-size: clamp(2rem, 4vw + 0.5rem, 3.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.headline-card {
+  font-size: clamp(1.35rem, 2vw + 0.5rem, 1.85rem);
+  line-height: 1.25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
